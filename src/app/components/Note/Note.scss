@@ -1,0 +1,40 @@
+.note {
+    margin: var(--m-0-75);
+    border: 1px solid rgba($color: #000000, $alpha: 0.3);
+    border-radius: var(--m-0-5);
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    &__text{
+        padding-left: var(--m-0-5);
+    }
+    &__weather {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        padding-bottom: var(--m-0-5);
+        img {
+            width: var(--m-5);
+            height: var(--m-4);
+        }
+        p {
+            white-space: nowrap;
+        }
+    }
+    &__close {
+        align-self: start;
+        cursor: pointer;
+        padding-top: var(--m-0-5);
+        padding-right: var(--m-0-5);
+
+        img {
+            max-width: var(--m-1-5);
+            max-height: var(--m-1-5);
+        }
+    }
+}

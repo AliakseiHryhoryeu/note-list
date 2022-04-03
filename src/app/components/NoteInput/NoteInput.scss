@@ -1,0 +1,63 @@
+.noteinput {
+    flex: 0 0 auto;
+    margin-top: auto;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    &__warn {
+        margin-left: var(--m-0-5);
+        color: var(--noteinput-color-warn);
+        display: none;
+    }
+    &__text {
+        width: 100%;
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        div:first-child {
+            margin-left: var(--m-0-5);
+        }
+        div:last-child {
+            margin-left: auto;
+            margin-right: var(--m-0-5);
+        }
+    }
+
+    &__input {
+        width: 100%;
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        margin: var(--m-0-5) 0;
+
+        input {
+            background: transparent;
+            width: 100%;
+            margin-left: var(--m-0-5);
+            border: none;
+            border-bottom: 2px solid #54a9e6;
+        }
+
+        img {
+            cursor: pointer;
+            max-width: var(--m-1-5);
+            max-height: var(--m-1-5);
+            padding: 0 var(--m-0-5);
+        }
+    }
+}
+
+.noteinput-warn-color-red {
+    display: block;
+    color: var(--noteinput-color-warn);
+}
+
+.noteinput-warn-bg-red {
+    input {
+        background: var(--noteinput-bg-warn);
+    }
+}

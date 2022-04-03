@@ -1,0 +1,51 @@
+:root {
+    /* Background colors */
+
+    --notelist-bg-color: hsl(205, 68%, 94%, 100%);
+    --note-bg-color: hsl(205, 56%, 89%, 100%);
+
+    --noteinput-bg-warn: hsl(360, 74%, 77%, 100%);
+    --noteinput-color-warn: hsl(360, 79%, 52%, 100%);
+    /* border's settings */
+
+    /* buttons settings */
+    --btn-blue-color: hsl(234, 92%, 33%, 70%);
+    --btn-gray-color: hsl(240, 15%, 89%, 70%);
+    --btn-height: 3rem;
+    --btn-border-radius: 1rem;
+    --btn-font-size: 1.1rem;
+
+    /*Fonts and typography start*/
+
+    --big-font-size: 2.5rem;
+    --h1-font-size: 2rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.1rem;
+    --normal-font-size: 0.938rem;
+    --small-font-size: 0.813rem;
+    --smaller-font-size: 0.75rem;
+
+    @media screen and (min-width: 968px) {
+        --big-font-size: 3.5rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: 0.875rem;
+        --smaller-font-size: 0.813rem;
+    }
+
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    /*Fonts and typography end*/
+
+    /* Margenes */
+    --m-0-2: 0.2rem;
+    --m-0-5: 0.5rem;
+    --m-0-75: 0.75rem;
+    --m-1: 1rem;
+    --m-1-5: 1.5rem;
+    --m-2: 2rem;
+    --m-4: 4rem;
+    --m-5: 5rem;
+}

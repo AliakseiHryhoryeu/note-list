@@ -1,0 +1,13 @@
+{
+  "weatherReq": {
+    "url": "https://api.openweathermap.org/data/2.5/onecall",
+    "lat": "53.905315",
+    "lon": "30.342728",
+    "appid": "76d27d60425a59e479dd539ce64d9fd7",
+    "units": "metric",
+    "lang": "en"
+  },
+  "weatherIconReq": {
+    "url": "http://openweathermap.org/img/wn/"
+  }
+}
