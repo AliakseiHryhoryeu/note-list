@@ -38,3 +38,12 @@
         }
     }
 }
+
+.note-empty{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: var(--m-1-5);
+    font-size: var(--m-1-5);
+}

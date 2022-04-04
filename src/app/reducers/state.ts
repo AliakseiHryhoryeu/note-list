@@ -1,7 +1,10 @@
 import { NotesModel } from './../models';
 
 export namespace RootState {
-  export type NotesState = NotesModel[];
+  export type NotesState = {
+    allNotes:NotesModel[]
+  }
+
 }
 
 export interface RootState {
