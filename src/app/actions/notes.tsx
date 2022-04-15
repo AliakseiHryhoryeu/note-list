@@ -1,9 +1,8 @@
-import { useMemo } from 'react';
-import { Dispatch, bindActionCreators } from 'redux';
+import { useMemo } from 'react'
+import { Dispatch, bindActionCreators } from 'redux'
 import axios from 'axios'
 
-import { NotesModel } from 'app/models';
-import { NotesActionsTypes } from 'app/models/'
+import { NotesModel } from 'app/models'
 
 import config from 'assets/config.json'
 
@@ -29,7 +28,7 @@ export namespace NotesActions {
                         'lang': config.weatherReq.lang,
                     }
                 })
-                dispatch({ type: NotesActionsTypes.GET_WEATHER })
+                dispatch({ type: Type.GET_WEATHER })
                 return response.data.current
             } catch (e) {
                 console.log(e)
@@ -41,7 +40,7 @@ export namespace NotesActions {
     export const setNotes = () => {
         return async dispatch => {
             try {
-                dispatch({ type: NotesActionsTypes.SET_NOTES })
+                dispatch({ type: Type.SET_NOTES })
             } catch (e) {
                 console.log(e)
             }
@@ -52,7 +51,7 @@ export namespace NotesActions {
         return async dispatch => {
             try {
                 const response = JSON.parse(localStorage.getItem('notes-list') || '[]') as NotesModel[]
-                dispatch({ type: NotesActionsTypes.GET_NOTES, payload: response })
+                dispatch({ type: Type.GET_NOTES, payload: response })
             } catch (e) {
                 console.log(e)
             }
@@ -78,7 +77,7 @@ export namespace NotesActions {
                     temperature: temperature,
                     date: date
                 }
-                dispatch({ type: NotesActionsTypes.ADD_NOTE, payload: response })
+                dispatch({ type: Type.ADD_NOTE, payload: response })
                 dispatch(setNotes())
             } catch (e) {
                 console.log(e)
@@ -90,7 +89,7 @@ export namespace NotesActions {
         return async dispatch => {
             try {
 
-                dispatch({ type: NotesActionsTypes.DELETE_NOTE, payload: id })
+                dispatch({ type: Type.DELETE_NOTE, payload: id })
                 dispatch(setNotes())
             } catch (e) {
                 console.log(e)
@@ -101,8 +100,8 @@ export namespace NotesActions {
 
 }
 
-export type NotesActions = Omit<typeof NotesActions, 'Type'>;
+export type NotesActions = Omit<typeof NotesActions, 'Type'>
 export const useNotesActions = (dispatch: Dispatch) => {
-    const { Type, ...actions } = NotesActions;
-    return useMemo(() => bindActionCreators(actions as any, dispatch), [dispatch]) as NotesActions;
+    const { Type, ...actions } = NotesActions
+    return useMemo(() => bindActionCreators(actions as any, dispatch), [dispatch]) as NotesActions
 }

@@ -1,11 +1,13 @@
 import React, { FC } from 'react'
-// import testWeatherIcon from 'assets/img/testWeatheIcon.png'
-import closeIcon from 'assets/img/close-cross.svg'
+import { useDispatch } from 'react-redux'
+
 import { NotesModel } from 'app/models'
+import { useNotesActions } from 'app/actions'
+
+import closeIcon from 'assets/img/close-cross.svg'
 
 import './Note.scss'
-import { useDispatch } from 'react-redux'
-import { useNotesActions } from 'app/actions'
+
 
 type NoteProps = {
   notes: NotesModel[]
@@ -13,8 +15,8 @@ type NoteProps = {
 
 export const Note: FC<NoteProps> = ({ notes }) => {
 
-  const dispatch = useDispatch();
-  const notesActions = useNotesActions(dispatch);
+  const dispatch = useDispatch()
+  const notesActions = useNotesActions(dispatch)
 
   const monthNames = ["January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December"]
@@ -24,7 +26,6 @@ export const Note: FC<NoteProps> = ({ notes }) => {
         dispatch(notesActions.deleteNote(id))
       }
   }
-
 
   if (!notes.length) {
     return (
@@ -63,5 +64,3 @@ export const Note: FC<NoteProps> = ({ notes }) => {
     </>
   )
 }
-
-

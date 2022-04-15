@@ -1,18 +1,17 @@
 import React, { FC, useEffect } from 'react'
-import { NoteInput } from '..'
-import { Note } from '..'
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux'
 
 import {useNotesActions} from 'app/actions'
-import { RootState } from 'app/reducers';
+import { RootState } from 'app/reducers'
+import { NoteInput } from 'app/components'
+import { Note } from 'app/components'
 
 import './NoteList.scss'
 
-
 export const NoteList:FC = () => {
 
-  const dispatch = useDispatch();
-  const notesActions = useNotesActions(dispatch);
+  const dispatch = useDispatch()
+  const notesActions = useNotesActions(dispatch)
   const { notes } = useSelector((state: RootState) => {
     return {
       notes: state.notes.allNotes,
@@ -23,7 +22,6 @@ export const NoteList:FC = () => {
     notesActions.getNotes()
   }, [])
 
-
   return (
     <div className='notelist'>
 
@@ -32,4 +30,3 @@ export const NoteList:FC = () => {
     </div>
   )
 }
-

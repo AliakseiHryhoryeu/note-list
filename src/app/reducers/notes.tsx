@@ -1,4 +1,4 @@
-import { NotesActionsTypes } from '../models';
+import { NotesActionsTypes } from 'app/models'
 import { RootState } from './index'
 
 const initialState: RootState.NotesState = {

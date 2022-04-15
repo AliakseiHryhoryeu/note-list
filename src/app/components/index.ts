@@ -1,3 +1,3 @@
-export { Note } from './Note';
-export { NoteInput } from './NoteInput';
-export { NoteList } from './NoteList';
+export { Note } from './Note'
+export { NoteInput } from './NoteInput'
+export { NoteList } from './NoteList'

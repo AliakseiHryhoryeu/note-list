@@ -1,4 +1,4 @@
-import { NotesModel } from './../models';
+import { NotesModel } from 'app/models'
 
 export namespace RootState {
   export type NotesState = {
@@ -8,8 +8,6 @@ export namespace RootState {
 }
 
 export interface RootState {
-  notes: RootState.NotesState;
-  router?: any;
+  notes: RootState.NotesState
+  router?: any
 }
-
-

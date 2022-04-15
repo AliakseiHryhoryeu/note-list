@@ -9,6 +9,9 @@
     align-items: center;
     &__text{
         padding-left: var(--m-0-5);
+        p {
+            word-break: break-all;
+        }
     }
     &__weather {
         display: flex;

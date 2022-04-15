@@ -1,7 +1,7 @@
-import React from 'react';
-import {NoteList} from './components/';
+import React, { FC } from 'react'
+import { NoteList } from './components/'
 
-function App() {
+const App: FC = () => {
 
   return (
     <>
@@ -10,4 +10,4 @@ function App() {
   )
 }
 
-export default App;
+export default App

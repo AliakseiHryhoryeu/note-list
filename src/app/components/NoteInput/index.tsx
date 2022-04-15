@@ -1,11 +1,12 @@
 import React, { FC, useState } from 'react'
 import { useDispatch } from 'react-redux'
-
-import inputbtn from 'assets/img/inputbtn.png'
 import classNames from 'classnames'
 
-import './NoteInput.scss'
 import { useNotesActions } from 'app/actions'
+
+import inputbtn from 'assets/img/inputbtn.png'
+
+import './NoteInput.scss'
 
 
 export const NoteInput: FC = () => {
@@ -13,12 +14,17 @@ export const NoteInput: FC = () => {
   const [inputLimit, setInputLimit] = useState<boolean>(false)
   const [inputLimitValue, setInputLimitValue] = useState<number>(0)
 
-  const dispatch = useDispatch();
-  const notesActions = useNotesActions(dispatch);
+  const dispatch = useDispatch()
+  const notesActions = useNotesActions(dispatch)
 
   const addNoteHandler = (text: string) => {
-    changeInputHandler('')
-    dispatch(notesActions.addNote(text))
+    if (inputLimitValue > 300) {
+      alert('Maximum size 300 chars')
+    } else {
+      changeInputHandler('')
+      dispatch(notesActions.addNote(text))
+
+    }
   }
 
   const keyPressHandler = (event: React.KeyboardEvent) => {
